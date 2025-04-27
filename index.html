@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css" />
+<title>🔥CURSE🔥 Menu Ordering</title>
+</head>
+<body onload="initializeApp()">
+
+<!-- Logo Section -->
+<img 
+  src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.15752-9/494355553_573402891885832_4447870711429825730_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEPXVfd_8An1idg41rA-Z6buqjoFFRmdm66qOgUVGZ2bu3rOIx4ukbeomumXENci9aGudADQpIb2t1Njo65pNPO&_nc_ohc=vcaNeyh3qwwQ7kNvwH_3M4q&_nc_oc=Adnt5J3YDOhOUizXf-ztfH5KCIbP06oVZ3pBD84vLM2bP2Bl2QOLaNWA0dG5Z66A0cc&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&oh=03_Q7cD2AH-MJvSsFgfgyP9UvA3gcu6woCwaNsnwknGAWYH3DciJA&oe=6835427E" 
+  alt="Molly Logo" 
+  class="Molly-circle"
+/>
+
+<h1> 🔥CURSE🔥   </h1>
+
+<!-- Navbar -->
+<div class="navbar">
+  <button onclick="filterMenu('home')">🔥 Home Page 🔥</button>
+  <button onclick="filterMenu('drinks')">🔥 Drinks 🔥</button>
+  <button onclick="filterMenu('desserts')">🔥 Desserts 🔥</button>
+  <button onclick="filterMenu('meals')">🔥 Meals 🔥</button>
+</div>
+
+<!-- Menu -->
+<div id="menu"></div>
+
+<!-- Order Section -->
+<div class="order-container">
+  <h3>🔥 Your Order 🔥:</h3>
+  <ul id="order-summary"></ul>
+  <p><strong>Total: ₱<span id="total">0.00</span></strong></p>
+
+  <div class="order-buttons">
+    <button onclick="pay('GCash')">🔥 Pay with GCash 🔥</button> 
+    <button onclick="pay('Card')">🔥 Pay with Card 🔥</button>
+    <button onclick="pay('Cash')">🔥 Pay with Cash 🔥</button>
+    <button onclick="startNewOrder()">🔥 Start New Order 🔥</button>
+  </div>
+</div>
+
+<!-- Loading & Receipt -->
+<div id="loading" class="loading-container">
+    <h3>🔥 Processing Payment...</h3>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+<div id="receipt"></div>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.15752-9/494355553_573402891885832_4447870711429825730_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEPXVfd_8An1idg41rA-Z6buqjoFFRmdm66qOgUVGZ2bu3rOIx4ukbeomumXENci9aGudADQpIb2t1Njo65pNPO&_nc_ohc=vcaNeyh3qwwQ7kNvwH_3M4q&_nc_oc=Adnt5J3YDOhOUizXf-ztfH5KCIbP06oVZ3pBD84vLM2bP2Bl2QOLaNWA0dG5Z66A0cc&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&oh=03_Q7cD2AH-MJvSsFgfgyP9UvA3gcu6woCwaNsnwknGAWYH3DciJA&oe=6835427E" alt="Loading Logo" class="loading-logo" />
+  <div class="loader"></div>
+  <p>🔥CURSE🔥</p><p>Loading...</p>
+</div>
+
+<div id="app-content" style="display: none;">
+  <!-- Your main app goes here -->
+</div>
+<script src="script.js"></script>
+</body>
+</html>
